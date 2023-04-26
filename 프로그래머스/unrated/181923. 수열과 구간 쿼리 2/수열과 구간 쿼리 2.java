@@ -7,9 +7,12 @@ class Solution {
         int[] result = new int[queries.length];
         
         for(int n=0; n<queries.length; n++){
+            int s = queries[n][0];
+            int e = queries[n][1];
+            int k = queries[n][2];
             ArrayList<Integer> list = new ArrayList<Integer>();
-            for(int i = queries[n][0]; i<=queries[n][1]; i++){
-                if(arr[i] > queries[n][2]){
+            for(int i = s; i<=e; i++){
+                if(arr[i] > k){
                     list.add(arr[i]);
                 }
             }
